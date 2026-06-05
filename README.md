@@ -103,32 +103,32 @@ Bạn chỉ cần chạy lại chính dòng lệnh cài đặt một chạm ở 
 
 ```
 quản lý：onmp open
-启动、停止、重启：onmp start|stop|restart
-查看网站列表：onmp list 
+Khởi động, dừng, khởi động lại: onmp start|stop|restart
+Xem danh sách trang web：onmp list 
 ```
 
-**主要软件包的管理命令：**
+**Các lệnh quản lý cho các gói phần mềm chính：**
 
 ```
-Nginx 管理命令
+Nginx Lệnh quản lý
 onmp nginx start|restart|stop
 
-MySQL 管理命令
+MySQL Lệnh quản lý
 onmp mysql start|restart|stop
 
-PHP 管理命令
+PHP Lệnh quản lý
 onmp php start|restart|stop
 
-Redis 管理命令
+Redis Lệnh quản lý
 onmp redis start|restart|stop
 ```
 
-**设置数据库密码：**
+**Đặt mật khẩu cơ sở dữ liệu：**
 
-输入 `onmp open` 后选择3，会提示 `Enter password:` ，这个时候要输入当前数据库的密码，比如我初始设置的数据库密码是123456，回车后要是密码正确，会提示输入你要设置的新密码，回车后会提示再次输入确认。也就是，一次旧密码，两次新密码。
+Nhập `onmp open` và chọn 3，Nó sẽ nhắc nhở `Enter password:` ，Đến bước này, bạn cần nhập mật khẩu cho cơ sở dữ liệu hiện tại. Ví dụ, mật khẩu cơ sở dữ liệu ban đầu của tôi là 123456，Nếu mật khẩu chính xác sau khi nhấn Enter, bạn sẽ được yêu cầu nhập mật khẩu mới. Sau khi nhấn Enter lần nữa, bạn sẽ được yêu cầu nhập mật khẩu mới một lần nữa để xác nhận. Nói cách khác, bạn nhập mật khẩu cũ một lần và mật khẩu mới hai lần.
 
-这个位置很简单，但是很多人都说改不了密码，其实是没看提示，没输入旧密码，所以我写清楚一些。
+Địa điểm này rất đơn giản, nhưng nhiều người nói rằng họ không thể thay đổi mật khẩu. Thực ra, họ không đọc hướng dẫn hoặc không nhập mật khẩu cũ, vì vậy tôi viết lại rõ ràng hơn.
 
-## 其他
+## Khác
 
-探针来自 https://github.com/WuSiYu/PHP-Probe
+Thăm dò từ https://github.com/WuSiYu/PHP-Probe
