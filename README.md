@@ -1,44 +1,41 @@
-ONMP
+## ONMP
 ===
+Lệnh cài đặt ONMP một chạm, dành cho các thiết bị đã cài đặt môi trường Entware.
+Hiện tại đã thử nghiệm thành công trên các firmware: Padavan, LEDE (OpenWrt), Merlin.
 
-适用于安装了Entware固件的onmp一键安装命令
-
-目前已经在Padavan、LEDE、梅林上测试成功
-
-`php-fpm` 和 `mysqld` 启动失败的可以开启swap
+Nếu `php-fpm` và `mysqld` khởi động thất bại, bạn có thể bật bộ nhớ ảo (SWAP) bằng cách:
 
 ```
 $ onmp open 
-# 选择7
+# Chọn phím số 7
 ```
 
-## 说明
+## Giới thiệu
+ONMP là viết tắt của: Opkg + Nginx + MySQL + PHP
 
-ONMP: Opkg + Nginx + MySQL + PHP
-
-这是一个用Linux Shell编写的脚本，可以为使用opkg包管理的路由器快速搭建Nginx/MySQL/PHP环境，并且内置了一些好用的网站程序一键免配置快速安装
+Đây là một script được viết bằng Linux Shell, giúp nhanh chóng xây dựng môi trường Nginx/MySQL/PHP cho các router sử dụng trình quản lý gói opkg. Ngoài ra, script còn tích hợp sẵn tính năng cài đặt nhanh không cần cấu hình cho một số ứng dụng web rất hữu ích.
 
 ```
-ONMP内置了以下程序的一键安装：
-(1) phpMyAdmin（数据库管理工具）
-(2) WordPress（使用最广泛的CMS）
-(3) Owncloud（经典的私有云）
-(4) Nextcloud（Owncloud团队的新作，美观强大的个人云盘）
-(5) h5ai（优秀的文件目录）
-(6) Lychee（一个很好看，易于使用的Web相册）
-(7) Kodexplorer（可道云aka芒果云在线文档管理器）
-(8) Typecho (流畅的轻量级开源博客程序)
-(9) Z-Blog (体积小，速度快的PHP博客程序)
-(10) DzzOffice (开源办公平台)
+ONMP tích hợp sẵn tính năng cài đặt nhanh các chương trình sau:
+(1) phpMyAdmin (Công cụ quản lý cơ sở dữ liệu)
+(2) WordPress (Mã nguồn CMS phổ biến nhất thế giới)
+(3) Owncloud (Nền tảng đám mây cá nhân kinh điển)
+(4) Nextcloud (Sản phẩm mới từ đội ngũ Owncloud, đám mây cá nhân đẹp và mạnh mẽ)
+(5) h5ai (Trình quản lý và hiển thị thư mục tệp tin tuyệt vời)
+(6) Lychee (Kho ảnh Web đẹp mắt, dễ sử dụng)
+(7) Kodexplorer (Trình quản lý tài liệu trực tuyến mã nguồn mở - hay còn gọi là Mango Cloud)
+(8) Typecho (Nền tảng blog mã nguồn mở siêu nhẹ và mượt mà)
+(9) Z-Blog (Mã nguồn blog PHP nhỏ gọn, tốc độ cao)
+(10) DzzOffice (Nền tảng văn phòng mã nguồn mở)
 ```
 
-所有的软件包均通过 opkg 安装，一切配置均在脚本中可见，请放心使用
-
-## 使用说明
+Tất cả các gói phần mềm đều được cài đặt thông qua opkg. Mọi cấu hình đều được hiển thị minh bạch trong script, bạn hoàn toàn có thể yên tâm sử dụng.
+## Hướng dẫn sử dụng chi tiết
 
 [wiki](https://github.com/xzhih/ONMP/wiki)
 
-[底噪博客](https://zhih.me)
+[Blog tác giả](https://zhih.me)
+
 
 ## 安装教程
 
