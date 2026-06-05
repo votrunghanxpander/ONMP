@@ -37,70 +37,72 @@ Tất cả các gói phần mềm đều được cài đặt thông qua opkg. M
 [Blog tác giả](https://zhih.me)
 
 
-## 安装教程
+## Hướng dẫn cài đặt
 
-### 1. 安装 Entware
+### 1. Cài đặt Entware
 
-Entware-ng 是一个适用于嵌入式系统的软件包库，使用 opkg 包管理系统进行管理，现在在官方的源上已经有超过 2000 个软件包了，可以说是非常的丰富
+Entware là một kho lưu trữ gói phần mềm dành cho các hệ thống nhúng, sử dụng hệ thống quản lý gói opkg. Hiện tại trên nguồn chính thức đã có hơn 2000 gói phần mềm, có thể nói là rất phong phú.
 
-不同的固件，安装方式都不一样，请认准安装方式（自己是什么固件总该懂得吧😂）
+Mỗi loại firmware sẽ có cách cài đặt Entware khác nhau, vui lòng xác định đúng loại firmware thiết bị của bạn để cài đặt chính xác:
 
-[在 LEDE 上使用 Entware](https://github.com/xzhih/ONMP/wiki/在-LEDE-上安装-Entware)
+[Cài đặt Entware trên LEDE / OpenWrt](https://github.com/xzhih/ONMP/wiki/在-LEDE-上安装-Entware)
 
-[在梅林上使用 Entware](https://github.com/xzhih/ONMP/wiki/在梅林上安装-Entware)
+[Cài đặt Entware trên Asuswrt-Merlin](https://github.com/xzhih/ONMP/wiki/在梅林上安装-Entware)
 
-[在 Padavan 上使用 entware](https://github.com/xzhih/ONMP/wiki/在-Padavan-上安装-Entware)
+[Cài đặt Entware trên Padavan](https://github.com/xzhih/ONMP/wiki/在-Padavan-上安装-Entware)
 
-### 2. 安装onmp
+### 2. Cài đặt ONMP
 
-一键命令，复制->粘贴->回车
+Sử dụng lệnh một chạm: Sao chép -> Dán vào Terminal -> Nhấn Enter.
 
 ```
  $ sh -c "$(curl -kfsSl https://raw.githubusercontent.com/xzhih/ONMP/master/oneclick.sh)"
 ```
 
-一长串的复制如果出错，可以按照以下给出的命令，一步步进行安装
+Nếu việc sao chép chuỗi lệnh dài trên bị lỗi, bạn có thể tiến hành cài đặt từng bước theo các lệnh dưới đây:
 
 ```
-# 进入 entware 挂载目录
- cd /opt && opkg install wget unzip 
+# Di chuyển vào thư mục gắn kết của entware và cài đặt wget, unzip
+cd /opt && opkg install wget unzip 
 
-# 下载软件包
+# Tải gói phần mềm ONMP
 wget --no-check-certificate -O /opt/onmp.zip https://github.com/xzhih/ONMP/archive/master.zip 
 
-# 解压
+# Giải nén
 unzip /opt/onmp.zip 
 cd /opt/ONMP-master 
 
-# 设置权限
+# Cấp quyền thực thi
 chmod +x ./onmp.sh 
 
-# 运行
-./onmp.sh 
+# Khởi chạy script
+./onmp.sh
 ```
 
-要是正常运行到脚本，会出现下面的情景，选1安装即可
+Nếu script chạy bình thường, giao diện menu sẽ xuất hiện. Bạn chỉ cần chọn số 1 để tiến hành cài đặt.
 
-![安装](https://i.loli.net/2018/03/03/5a99ac096c6a1.png)
+![Cài đặt](https://i.loli.net/2018/03/03/5a99ac096c6a1.png)
 
-正常安装中要是出现错误，会有错误信息，根据提示操作，目前得到的大多数反馈都是网络问题，因为 entware 的源在国外，而且他们的管理者说之前受到了来自亚洲的DDOS，所以对这边限流了，速度较慢。遇到这种情况，可以去看看剧，没准回来的时候就好了😄
+Nếu script chạy bình thường, giao diện menu sẽ xuất hiện. Bạn chỉ cần chọn số 1 để tiến hành cài đặt.
 
-安装成功得到的结果是这样的
+Nếu xảy ra lỗi trong quá trình cài đặt thông thường, hệ thống sẽ hiển thị thông báo lỗi, hãy xử lý theo gợi ý. Phần lớn các phản hồi lỗi hiện tại đều do vấn đề mạng, vì các máy chủ nguồn của Entware nằm ở nước ngoài (và từng bị giới hạn băng thông do sự cố DDoS). Tốc độ tải xuống có thể sẽ hơi chậm, lúc này bạn có thể thư giãn xem một bộ phim, biết đâu khi quay lại thì mọi thứ đã cài đặt xong.
 
-![安装成功](https://i.loli.net/2018/03/03/5a99aeda756ac.png)
+Sau khi cài đặt thành công, bạn sẽ nhận được thông báo hoàn tất trên màn hình. Chúc mừng bạn đã cài đặt thành công ONMP và có thể bắt đầu trải nghiệm!
 
-如果你也是和上图一样，那么恭喜你，成功的安装上了 ONMP，你可以尽情的玩耍了
+![Cài đặt thành công](https://i.loli.net/2018/03/03/5a99aeda756ac.png)
 
-## 更新脚本
+Nếu thiết bị của bạn trông giống như trong hình trên, thì xin chúc mừng! Bạn đã cài đặt ONMP thành công và giờ có thể thoải mái sử dụng nó.
 
-同样是安装的那条命令，选择 2 即可更新。
+## Cập nhật Script
 
-## ONMP 详细使用教程
+Bạn chỉ cần chạy lại chính dòng lệnh cài đặt một chạm ở trên, sau đó chọn số 2 để cập nhật script lên phiên bản mới nhất.
 
-**基本命令：**
+## Các lệnh điều khiển ONMP thông dụng
+
+**Các lệnh cơ bản:**
 
 ```
-管理：onmp open
+quản lý：onmp open
 启动、停止、重启：onmp start|stop|restart
 查看网站列表：onmp list 
 ```
